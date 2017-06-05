@@ -1,30 +1,51 @@
 
-
-
-
-//有一分数序列： 2 / 1 3 / 2 5 / 3 8 / 5 13 / 8 21 / 13......求出这个数列的前N项之和，保留两位小数。
+//一球从M米高度自由下落，每次落地后返回原高度的一半，再落下。 它在第N次落地时反弹多高？共经过多少米？ 保留两位小数
 #include<iostream>
 using namespace std;
 #include <iomanip> 
 
-
-
 int main()
 {
-	int n = 0;
-	double denominator = 1.0;
-	double molecule = 2.0;
-	double sum = 0;
-	cin >> n;
+	float m = 0.0, n = 0.0;
+	float sum = 0.0;
+	cin >> m >> n;
 	for (int i = 0; i < n; i++)
 	{
-		sum += (molecule / denominator);
-		molecule = molecule + denominator;
-		denominator = molecule - denominator;
+		sum += m;
+		m = m / 2;
+		sum += m;
 	}
-	cout << setiosflags(ios::fixed) << setprecision(2) << sum << endl;
+	sum -= m;   //画图解题，这里最后多加了一次
+	cout << setiosflags(ios::fixed) << setprecision(2) <<m<<" ";
+	cout << setiosflags(ios::fixed) << setprecision(2)<<sum<<endl;
 	return 0;
 }
+
+
+
+//有一分数序列： 2 / 1 3 / 2 5 / 3 8 / 5 13 / 8 21 / 13......求出这个数列的前N项之和，保留两位小数。
+//#include<iostream>
+//using namespace std;
+//#include <iomanip> 
+//
+//
+//
+//int main()
+//{
+//	int n = 0;
+//	double denominator = 1.0;
+//	double molecule = 2.0;
+//	double sum = 0;
+//	cin >> n;
+//	for (int i = 0; i < n; i++)
+//	{
+//		sum += (molecule / denominator);
+//		molecule = molecule + denominator;
+//		denominator = molecule - denominator;
+//	}
+//	cout << setiosflags(ios::fixed) << setprecision(2) << sum << endl;
+//	return 0;
+//}
 
 
 
