@@ -1,25 +1,45 @@
 
-//一球从M米高度自由下落，每次落地后返回原高度的一半，再落下。 它在第N次落地时反弹多高？共经过多少米？ 保留两位小数
-#include<iostream>
-using namespace std;
-#include <iomanip> 
+//猴子吃桃问题。猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。 第二天早上又将剩下的桃子吃掉一半，又多吃一个。以后每天早上都吃了前一天剩下的一半零一个。 到第N天早上想再吃时，见只剩下一个桃子了。求第一天共摘多少桃子。
+//10   1534
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int N = 0;
+//	int i = 1;
+//	cin >> N;
+//	for (; N > 1; N--)
+//	{
+//		i = (i + 1) * 2;
+//	}
+//	cout << i << endl;
+//	return 0;
+//}
 
-int main()
-{
-	float m = 0.0, n = 0.0;
-	float sum = 0.0;
-	cin >> m >> n;
-	for (int i = 0; i < n; i++)
-	{
-		sum += m;
-		m = m / 2;
-		sum += m;
-	}
-	sum -= m;   //画图解题，这里最后多加了一次
-	cout << setiosflags(ios::fixed) << setprecision(2) <<m<<" ";
-	cout << setiosflags(ios::fixed) << setprecision(2)<<sum<<endl;
-	return 0;
-}
+
+
+
+////一球从M米高度自由下落，每次落地后返回原高度的一半，再落下。 它在第N次落地时反弹多高？共经过多少米？ 保留两位小数
+//#include<iostream>
+//using namespace std;
+//#include <iomanip> 
+//
+//int main()
+//{
+//	float m = 0.0, n = 0.0;
+//	float sum = 0.0;
+//	cin >> m >> n;
+//	for (int i = 0; i < n; i++)
+//	{
+//		sum += m;
+//		m = m / 2;
+//		sum += m;
+//	}
+//	sum -= m;   //画图解题，这里最后多加了一次
+//	cout << setiosflags(ios::fixed) << setprecision(2) <<m<<" ";
+//	cout << setiosflags(ios::fixed) << setprecision(2)<<sum<<endl;
+//	return 0;
+//}
 
 
 
